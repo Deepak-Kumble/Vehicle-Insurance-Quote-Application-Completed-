@@ -65,28 +65,18 @@ export function Login() {
 
         <TextInput label="Username" placeholder="Your Username" size="md" />
         <PasswordInput label="Password" placeholder="Your Password" mt="md" size="md" />
-        
-        <Link href="/quote1" className={classes.link} style={{textDecoration:'none',color:'white'}}>
-        <Button fullWidth mt="xl" size="md" >
-        
-          Login
-          
-        </Button>
-        
-        </Link>
-    
 
-   
-       
-          
-           <Link href="/quote" className={classes.link} style={{textDecoration:'none'}}>
-           <Text size="sm" ta="center" mt="md"  color="black" underline>
+        <Link href="/" className={classes.link} style={{ textDecoration: "none", color: "white" }}>
+          <Button fullWidth mt="xl" size="md">
+            Login
+          </Button>
+        </Link>
+
+        <Link href="/quote" className={classes.link} style={{ textDecoration: "none" }}>
+          <Text size="sm" ta="center" mt="md" color="black" underline>
             Don't have an account? Register now!
-            
           </Text>
-          </Link>
-        
-    
+        </Link>
       </Paper>
     </div>
   );

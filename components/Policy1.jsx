@@ -34,7 +34,7 @@ export function Policy1({ quote }) {
   return (
     <Paper withBorder radius="md" className={classes.card}>
       <Text size="l" weight={500} mt="md">
-        <h2>Policy A</h2>
+        <h2>Base Policy </h2>
       </Text>
       <Text size="md" mt="sm">
         <p>

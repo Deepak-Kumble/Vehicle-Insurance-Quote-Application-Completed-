@@ -51,12 +51,21 @@ export default function Page() {
       cardno: 0,
       cvv: "",
       bankname: "",
-      amount: 0,
+      //amount: 0,
     },
   });
 
   let quote = parseFloat(quoteAmont);
-  let addOnsTotal = addOnIndexes?.split(",").reduce((total, v) => total + ADDONS.at(parseInt(v)).price, 0);
+  let reducer = (total, v) => total + ADDONS.at(parseInt(v)).price;
+  let addOnsTotal = null;
+  let addOns = [];
+  if (addOnIndexes?.length > 1) {
+    addOns = addOnIndexes?.split(",");
+    addOnsTotal = addOns.reduce(reducer, 0);
+  } else if (addOnIndexes != null && addOnIndexes?.toString().length == 1) {
+    addOns = [addOnIndexes.toString()];
+    addOnsTotal = addOns.reduce(reducer, 0);
+  }
   const tax = 50; // Assuming tax is 10% of the quote
   const grandTotal = quote + tax + addOnsTotal;
 
@@ -68,7 +77,7 @@ export default function Page() {
     for (const prop in values) {
       formData.append(prop, values[prop]);
     }
-
+    formData.append("amount", parseFloat(grandTotal));
     fetch(API_URL + "payment", {
       method: "POST",
       body: formData,
@@ -133,6 +142,10 @@ export default function Page() {
                 <Text>{quoteVals?.regis}</Text>
               </Group>
               <Group position="apart">
+                <Text>The registration year of your vehicle:</Text>
+                <Text>{quoteVals?.yor}</Text>
+              </Group>
+              <Group position="apart">
                 <Text>Vehicle Maker:</Text>
                 <Text>{quoteVals?.make}</Text>
               </Group>
@@ -160,11 +173,15 @@ export default function Page() {
                 <Text>Previous Traffics violations:</Text>
                 <Text>{quoteVals?.trafs}</Text>
               </Group>
+              <Group position="apart">
+                <Text>Previous Insurance Claims:</Text>
+                <Text>{quoteVals?.claims}</Text>
+              </Group>
 
               <Title align="center" order={4}>
                 Add Ons
               </Title>
-              {addOnIndexes?.split(",").map((v) => {
+              {addOns.map((v) => {
                 let x = ADDONS.at(parseInt(v));
                 return (
                   <Group position="apart">

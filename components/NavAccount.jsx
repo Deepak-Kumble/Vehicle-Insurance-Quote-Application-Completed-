@@ -51,7 +51,7 @@ const useStyles = createStyles((theme) => ({
 
     ...theme.fn.hover({
       backgroundColor: "#228ae6",
-      color:"white"
+      color: "white",
     }),
   },
 
@@ -153,7 +153,7 @@ export function NavAccount() {
 
   return (
     <Box>
-      <Header height={60} px="md" bg={"light blue"} >
+      <Header height={60} px="md" bg={"light blue"}>
         <Group position="apart" sx={{ height: "100%" }}>
           <h3>AUTO ARMOR</h3>
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
@@ -172,7 +172,17 @@ export function NavAccount() {
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
                 <Group position="apart" px="md">
-                  <Text fw={500}> <Link href="/quote" className={classes.link}style={{textDecoration:'none'}} position="center"> Get your personalized Quote today!</Link></Text>
+                  <Text fw={500}>
+                    {" "}
+                    <Link
+                      href="/quote"
+                      className={classes.link}
+                      style={{ textDecoration: "none" }}
+                      position="center">
+                      {" "}
+                      Get your personalized Quote today!
+                    </Link>
+                  </Text>
                 </Group>
 
                 <Divider my="sm" mx="-md" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
@@ -184,7 +194,6 @@ export function NavAccount() {
                 <div className={classes.dropdownFooter}>
                   <Group position="apart">
                     <div>
-                      
                       <Text size="xs" color="dimmed" position="center">
                         Life is unpredictable, but your insurance doesn't have to be – get a quote today.
                       </Text>
@@ -195,8 +204,8 @@ export function NavAccount() {
             </HoverCard>
 
             <Link href="/retrieve" className={classes.link}>
-            Retrieve Quote
-          </Link>
+              Retrieve Quote
+            </Link>
 
             <Link href="/about" className={classes.link}>
               About Us
@@ -205,8 +214,6 @@ export function NavAccount() {
               Contact
             </Link>
           </Group>
-
-         
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
         </Group>
@@ -231,7 +238,6 @@ export function NavAccount() {
               <IconChevronDown size={16} color={theme.fn.primaryColor()} />
             </Center>
           </UnstyledButton>
-          
 
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 

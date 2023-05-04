@@ -18,6 +18,7 @@ import {
   Divider,
 } from "@mantine/core";
 import Link from "next/link";
+import { NavAccount } from "../components/NavAccount";
 import { Banner } from "../components/Banner";
 import { DateInput } from "@mantine/dates";
 import { Progress } from "@mantine/core";
@@ -64,7 +65,7 @@ export default function Page() {
 
   return (
     <>
-      <NavBar />
+      <NavAccount />
       <br />
       <Banner />
       <br />

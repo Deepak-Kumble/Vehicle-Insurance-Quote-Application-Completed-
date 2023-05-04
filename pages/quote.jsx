@@ -27,6 +27,7 @@ import { Radio, Group } from "@mantine/core";
 import { QuoteHeader } from "../components/QuoteHeader";
 import { Stepper } from "@mantine/core";
 import Link from "next/link";
+import { NavAccount } from "../components/NavAccount";
 
 export default function Page() {
   const form = useForm({
@@ -81,7 +82,7 @@ export default function Page() {
 
   return (
     <>
-      <NavBar />
+      <NavAccount />
       <Banner />
 
       <Grid gutter="xl">
@@ -93,12 +94,15 @@ export default function Page() {
             <Text align="center" size="xs" color="dimmed">
               Provide all the required details in order to get a quote
             </Text>
+
             <form onSubmit={form.onSubmit(formSubmitHandler)}>
               <Stack spacing={"xs"}>
                 <TextInput
                   type="text"
                   label="First Name:"
                   name="firstName"
+                  size="md"
+                  placeholder="Enter you first name"
                   required
                   {...form.getInputProps("firstName")}
                 />
@@ -108,6 +112,7 @@ export default function Page() {
                   id="lastName"
                   label="Last Name:"
                   name="lastName"
+                  placeholder="Enter you last name"
                   size="md"
                   required
                   {...form.getInputProps("lastName")}
@@ -134,6 +139,7 @@ export default function Page() {
                   id="email"
                   name="email"
                   size="md"
+                  placeholder="Enter you email"
                   required
                   {...form.getInputProps("email")}
                 />
@@ -144,6 +150,7 @@ export default function Page() {
                   id="num"
                   name="num"
                   size="md"
+                  placeholder="Enter you phone number"
                   required
                   {...form.getInputProps("num")}
                 />
@@ -154,6 +161,7 @@ export default function Page() {
                   name="addr"
                   rows="5"
                   size="md"
+                  placeholder="Enter you address"
                   required
                   {...form.getInputProps("addr")}
                 />
@@ -163,6 +171,7 @@ export default function Page() {
                   label="Username:"
                   name="username"
                   size="md"
+                  placeholder="Enter you Username"
                   required
                   {...form.getInputProps("username")}
                 />
@@ -172,6 +181,7 @@ export default function Page() {
                   label="Password:"
                   name="password"
                   size="md"
+                  placeholder="Enter you password"
                   required
                   {...form.getInputProps("password")}
                 />

@@ -42,9 +42,10 @@ export default function Page() {
   });
 
   useEffect(() => {
-    form.setValues(
-      GetUserQuoteState(JSON.parse(localStorage.getItem("quote"))["user_name"], "quote3") ?? initVals
-    );
+    let x = JSON.parse(localStorage.getItem("quote"))["user_name"];
+    let y = GetUserQuoteState(x, "quote3");
+    y = y ? new Date(y) : new Date();
+    form.setValues(y ?? initVals);
   }, []);
 
   const handleBackButtonClick = () => {
@@ -63,7 +64,7 @@ export default function Page() {
 
   return (
     <>
-      <NavBar />
+      <NavAccount />
       <br />
       <Banner />
       <br />

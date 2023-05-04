@@ -62,6 +62,17 @@ export default function Page() {
           <br />
           <Policy2 />
         </Stack>
+        <br />
+        <Group position="right">
+          {/*<Link href="/quote3" style={{ textDecoration: "none" }}>
+            <Button variant={"subtle"} radius="xs">
+              Back
+            </Button>
+  </Link>*/}
+          <Link href="/quote5">
+            <Button radius="xl">Buy Now</Button>
+          </Link>
+        </Group>
       </Paper>
 
       <FooterLinks />
