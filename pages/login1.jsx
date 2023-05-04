@@ -1,4 +1,17 @@
-import { Button, Grid, Stack, Center, Paper, TextInput, Modal, Text, Col, Tooltip } from "@mantine/core";
+import {
+  Button,
+  Grid,
+  Stack,
+  createStyles,
+  Center,
+  Paper,
+  TextInput,
+  Modal,
+  Text,
+  Col,
+  Tooltip,
+  Title,
+} from "@mantine/core";
 import { DatePicker } from "@mantine/dates";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
@@ -10,8 +23,39 @@ import { Banner } from "../components/Banner";
 import { GetUserCurrentCounter } from "../components/data/UserQuoteStateSimulator";
 import Link from "next/link";
 import { Login } from "../components/Login";
+import { NavAccount } from "../components/NavAccount";
+
+const useStyles = createStyles((theme) => ({
+  wrapper: {
+    height: "80vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "left",
+    backgroundImage: "url(https://iiflinsurance.com/images/2020/07/44-01.jpg)",
+    backgroundSize: "cover",
+  },
+
+  // form: {
+  //   borderRight: `${rem(1)} solid ${
+  //     theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.colors.gray[3]
+  //   }`,
+  //   minHeight: rem(900),
+  //   maxWidth: rem(450),
+  //   paddingTop: rem(80),
+
+  //   [theme.fn.smallerThan("sm")]: {
+  //     maxWidth: "100%",
+  //   },
+  // },
+
+  title: {
+    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+  },
+}));
 
 export default function Page() {
+  const { classes } = useStyles();
   const form = useForm({
     initialValues: {
       firstName: "",
@@ -47,110 +91,58 @@ export default function Page() {
   return (
     <>
       <NavBar />
-      <Banner />
-      <Login />
+      <></>
+      <div className={classes.wrapper}>
+        <Paper
+          radius="md"
+          p="xl"
+          withBorder
+          shadow={"lg"}
+          style={{
+            position: "absolute",
+            left: "10%",
+            background: "hsla(0, 0%, 90%, 0.6)",
+            borderRadius: "6px",
+            boxShadow: "0 5px 30px rgba(0, 0, 0, 0.4)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid hsla(0, 0%, 100%, 0.6)",
+          }}>
+          <Title order={2} className={classes.title} ta="center" mt="md" mb={50}>
+            Welcome back to Auto Armor!
+          </Title>
 
-      <Grid gutter="xl">
-        <Col span={9}>
-          <Paper w="100%" h="100%" shadow="lg" radius="xs" p="lg">
-            <Text align="center" size="xl">
-              <b>Login</b>
-            </Text>
-            <Text align="center" size="xs" color="dimmed">
-              Please enter your username and password to login.
-            </Text>
-            <br />
-            <form onSubmit={form.onSubmit(handleFormSubmit)}>
-              <Stack spacing="xs" align="center">
-                <TextInput
-                  type="text"
-                  label="Username:"
-                  size="md"
-                  placeholder="Enter your Username"
-                  required
-                  {...form.getInputProps("username")}
-                />
+          <form onSubmit={form.onSubmit(handleFormSubmit)}>
+            <Stack spacing="xs">
+              <TextInput
+                type="text"
+                label="Username:"
+                size="md"
+                placeholder="Enter your Username"
+                required
+                {...form.getInputProps("username")}
+              />
 
-                <TextInput
-                  type="password"
-                  label="Password:"
-                  size="md"
-                  placeholder="Enter your Password"
-                  required
-                  {...form.getInputProps("password")}
-                />
+              <TextInput
+                type="password"
+                label="Password:"
+                size="md"
+                placeholder="Enter your Password"
+                required
+                {...form.getInputProps("password")}
+              />
 
-                <Button type="submit" radius="xs">
-                  Login
-                </Button>
-              </Stack>
-            </form>
-          </Paper>
-        </Col>
-
-        <Col span={3}>
-          <Center>
-            <Paper w="100%" h="100%" shadow="lg" radius="xs" p="lg">
-              <div style={{ marginTop: "20px" }}></div>
-              <Center>
-                <h3>Our Offerings...</h3>
-              </Center>
-              <ul>
-                <li>Get a new quote</li>
-                <li>Retrieve an old quote</li>
-                <li>Competitive Rates</li>
-                <li>Comprehensive Coverage</li>
-                <li>Online Policy Management</li>
-                <li>Defaqto 5 Star Rated</li>
-              </ul>
-              <div style={{ marginTop: "20px", textAlign: "center" }}>
-                <img
-                  src="https://www.direct.aviva.co.uk/quote/Direct/Motor/Content/images/defaqto-car-logo-2023.png"
-                  alt="Defaqto Car Logo"
-                  style={{ maxWidth: "60%", maxHeight: "60%" }}
-                />
-                <Tooltip label="More Information" position="bottom" withArrow>
-                  <span style={{ marginLeft: "5px", cursor: "pointer" }} onClick={handleInfoClick}>
-                    <br />ⓘ
-                  </span>
-                </Tooltip>
-                {isModalOpen && (
-                  <Modal opened={isModalOpen} onClose={handleCloseModal}>
-                    <Text>
-                      <ul>
-                        <li>
-                          <b>Competitive Rates:</b> We offer competitive rates for vehicle insurance, ensuring
-                          that you get the coverage you need at a price that fits your budget.
-                        </li>
-
-                        <li>
-                          <b>Comprehensive Coverage:</b> Our insurance policies provide comprehensive coverage
-                          for your vehicle, protecting you against a wide range of risks such as accidents,
-                          theft, vandalism, and natural disasters.
-                        </li>
-
-                        <li>
-                          <b>24/7 Claims Support:</b> We understand that accidents can happen at any time.
-                          That's why we provide 24/7 claims support, allowing you to make new claims online or
-                          via phone whenever you need to.
-                        </li>
-
-                        <li>
-                          <b>Defaqto 5 Star Rated:</b> Our insurance policies have been awarded the Defaqto 5
-                          Star rating, which signifies their high quality and comprehensive coverage. You can
-                          have peace of mind knowing that you are getting top-notch protection for your
-                          vehicle.
-                        </li>
-                      </ul>
-                    </Text>
-                  </Modal>
-                )}
-              </div>
-            </Paper>
-          </Center>
-        </Col>
-      </Grid>
-
+              <Button type="submit" radius="xs">
+                Login
+              </Button>
+              <Link href="/quote" className={classes.link} style={{ textDecoration: "none" }}>
+                <Text size="sm" ta="center" mt="md" color="black" underline>
+                  Don't have an account? Register now!
+                </Text>
+              </Link>
+            </Stack>
+          </form>
+        </Paper>
+      </div>
       <FooterLinks />
     </>
   );

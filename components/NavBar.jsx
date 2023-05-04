@@ -51,7 +51,7 @@ const useStyles = createStyles((theme) => ({
 
     ...theme.fn.hover({
       backgroundColor: "#228ae6",
-      color:"white"
+      color: "white",
     }),
   },
 
@@ -153,7 +153,7 @@ export function NavBar() {
 
   return (
     <Box>
-      <Header height={60} px="md" bg={"light blue"} >
+      <Header height={60} px="md" bg={"light blue"}>
         <Group position="apart" sx={{ height: "100%" }}>
           <h3>AUTO ARMOR</h3>
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
@@ -172,7 +172,17 @@ export function NavBar() {
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
                 <Group position="apart" px="md">
-                  <Text fw={500}> <Link href="/quote1" className={classes.link}style={{textDecoration:'none'}} position="center"> Get your personalized Quote today!</Link></Text>
+                  <Text fw={500}>
+                    {" "}
+                    <Link
+                      href="/quote1"
+                      className={classes.link}
+                      style={{ textDecoration: "none" }}
+                      position="center">
+                      {" "}
+                      Get your personalized Quote today!
+                    </Link>
+                  </Text>
                 </Group>
 
                 <Divider my="sm" mx="-md" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
@@ -184,7 +194,6 @@ export function NavBar() {
                 <div className={classes.dropdownFooter}>
                   <Group position="apart">
                     <div>
-                      
                       <Text size="xs" color="dimmed" position="center">
                         Life is unpredictable, but your insurance doesn't have to be – get a quote today.
                       </Text>
@@ -206,7 +215,7 @@ export function NavBar() {
           </Group>
 
           <Group className={classes.hiddenMobile}>
-            <Link href={"/login"}>
+            <Link href={"/login1"}>
               <Button variant="default">Login</Button>
             </Link>
 
@@ -238,7 +247,6 @@ export function NavBar() {
               <IconChevronDown size={16} color={theme.fn.primaryColor()} />
             </Center>
           </UnstyledButton>
-          
 
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
