@@ -5,12 +5,7 @@ export const ADDONS = [
     description:
       "Every year, your car devaluates due to wear and tear of its parts. The add-on does not consider this, giving you complete coverage.",
   },
-  {
-    name: "Engine Protect Plus Cover",
-    yprice: 100,
-    description:
-      "This add-on cover protects your engine from damages that are caused as a consequence of an accident.",
-  },
+ 
   {
     name: "Garage Cash Allowance",
     price: 120,

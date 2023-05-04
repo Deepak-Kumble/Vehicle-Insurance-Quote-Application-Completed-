@@ -139,6 +139,18 @@ export default function Page() {
                   </Group>
                 </Radio.Group>
 
+                <Text align size="sm" color="dimmed">
+                  <b>Upgrade:</b> Upgrade Your Insurance Policy for Enhanced Protection. Enhance your coverage
+                  with our upgrade option Tailor your insurance policy to meet your changing needs Expand your
+                  coverage limits and benefits for comprehensive protection Stay ahead of risks by upgrading
+                  your insurance policy Upgrade today for greater peace of mind <br />
+                  <br />
+                  <b>Existing:</b>Renew Your Existing Insurance Policy with Ease. Seamless renewal process for
+                  your current insurance policy. Maintain your current level of coverage and benefits Continue
+                  enjoying the protection you trust Hassle-free renewal with no changes to your policy Stay
+                  protected with a simple and convenient renewal of your existing policy
+                </Text>
+
                 <DateInput
                   id="cover_type"
                   name="cover_type"

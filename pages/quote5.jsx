@@ -212,6 +212,16 @@ export default function Page() {
                         {...form.getInputProps("cvv")}
                       />
                     </Grid.Col>
+
+                    <Grid.Col span={12}>
+                      <Select
+                        label="Bank Name:"
+                        id="bank-name"
+                        name="bankname"
+                        data={["HSBC", "Barclays", "Llyods Banking Group", "Natwest Group"]}
+                        {...form.getInputProps("bankname")}
+                      />
+                    </Grid.Col>
                   </Grid>
 
                   <Center>
