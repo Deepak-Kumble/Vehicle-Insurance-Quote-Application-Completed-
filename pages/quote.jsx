@@ -58,13 +58,13 @@ export default function Page() {
       });
       let username = await req.text();
       if (username === "-1") throw new exception("INTERNAL SERVER ERROR, Cant create a new user instance");
-      localStorage.setItem(
-        "quote",
-        JSON.stringify({
-          user_name: username,
-        })
-      );
-      Router.push("/quote1");
+      // localStorage.setItem(
+      //   "quote",
+      //   JSON.stringify({
+      //     user_name: username,
+      //   })
+      // );
+      Router.push("/");
     } catch (ex) {
       alert("An error occurred while saving user details.\n" + "Error Details: " + ex.message);
     }

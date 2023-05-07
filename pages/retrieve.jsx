@@ -24,13 +24,13 @@ export default function Page() {
     let x = GetUserCurrentCounter(values.username);
     let obj = {
       user_name: values.username,
-      ...x.quote1,
-      ...x.quote2,
-      ...x.quote3,
-      ...x.quote4,
+      ...x?.quote1,
+      ...x?.quote2,
+      ...x?.quote3,
+      ...x?.quote4,
     };
     localStorage.setItem("quote", JSON.stringify(obj));
-    Router.push("/quote" + x.counter);
+    Router.push("/quote" + x?.counter);
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -101,8 +101,8 @@ export default function Page() {
                     if (response.ok) {
                       let quoteData = JSON.parse(localStorage.getItem("quote"));
                       let x = {
-                        ...v,
                         ...quoteData,
+                        ...v,
                       };
 
                       let searchparams = new URLSearchParams(x);

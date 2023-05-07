@@ -89,8 +89,8 @@ export default function Page() {
                     if (response.ok) {
                       let quoteData = JSON.parse(localStorage.getItem("quote"));
                       let x = {
-                        ...v,
                         ...quoteData,
+                        ...v,
                       };
                       localStorage.setItem("quote", JSON.stringify(x));
                       Router.push("/quote2");
