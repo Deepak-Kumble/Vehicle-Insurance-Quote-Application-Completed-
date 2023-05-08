@@ -88,9 +88,7 @@ export function Features() {
         Auto Armor is the premier choice for vehicle insurance quotes. Our online platform makes it easy to
         compare rates from multiple providers and find the best coverage for your needs. We understand that
         choosing the right insurance can be overwhelming, so we've made it our mission to simplify the process
-        and provide personalized recommendations. Our team of experts is always here to help, whether you have
-        questions about your policy or need assistance filing a claim. With Auto Armor, you can rest easy
-        knowing that your vehicle is protected by top-rated insurers at an affordable price.
+        and provide personalized recommendations. 
       </Text>
 
       <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
