@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     marginTop: theme.spacing.xl,
     fontSize: theme.fontSizes.lg,
-    color:"black",
+    color: "black",
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: rem(18),
@@ -95,12 +95,10 @@ export function HeroSection() {
               className={classes.control}
               variant="gradient"
               gradient={{ from: "blue", to: "cyan" }}>
-              <Link href="/quote" className={classes.link} style={{textDecoration:'none',color:'white'}}>
-              Get your Quote now
+              <Link href="/quote" className={classes.link} style={{ textDecoration: "none", color: "white" }}>
+                Get your Quote now
               </Link>
             </Button>
-
-      
           </Group>
         </Center>
       </Container>

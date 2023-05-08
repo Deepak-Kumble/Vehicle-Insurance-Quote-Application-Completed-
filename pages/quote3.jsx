@@ -135,21 +135,27 @@ export default function Page() {
                   size="md"
                   required>
                   <Group>
-                    <Radio label="Upgrade" value="Upgrade" />
+                    <Radio label="New" value="New" />
                     <Radio label="Existing" value="Existing" />
+                    <Radio label="Upgrade" value="Upgrade" />
                   </Group>
                 </Radio.Group>
 
                 <Text align size="sm" color="dimmed">
+                  <b>New:</b> Buy Your Insurance Policy to give your vehicle the protection it deserves.Stay
+                  protected with a simple and convenient policy of your choice. Multiple add-ons for you to
+                  choose from. Hassle-free upgrade with no changes to your policy if you want to change your
+                  choice of policy.
+                  <br />
+                  <b>Existing:</b> Renew Your Existing Insurance Policy with Ease. Seamless renewal process
+                  for your current insurance policy. Maintain your current level of coverage and benefits
+                  Continue enjoying the protection you trust Hassle-free renewal with no changes to your
+                  policy Stay protected with a simple and convenient renewal of your existing policy
+                  <br />
                   <b>Upgrade:</b> Upgrade Your Insurance Policy for Enhanced Protection. Enhance your coverage
                   with our upgrade option Tailor your insurance policy to meet your changing needs Expand your
                   coverage limits and benefits for comprehensive protection Stay ahead of risks by upgrading
                   your insurance policy Upgrade today for greater peace of mind <br />
-                  <br />
-                  <b>Existing:</b>Renew Your Existing Insurance Policy with Ease. Seamless renewal process for
-                  your current insurance policy. Maintain your current level of coverage and benefits Continue
-                  enjoying the protection you trust Hassle-free renewal with no changes to your policy Stay
-                  protected with a simple and convenient renewal of your existing policy
                 </Text>
 
                 <DateInput

@@ -177,6 +177,10 @@ export default function Page() {
                 <Text>Previous Insurance Claims:</Text>
                 <Text>{quoteVals?.claims}</Text>
               </Group>
+              <Group position="apart">
+                <Text>Insurance Type:</Text>
+                <Text>{quoteVals?.renewal_type}</Text>
+              </Group>
 
               <Title align="center" order={4}>
                 Add Ons
