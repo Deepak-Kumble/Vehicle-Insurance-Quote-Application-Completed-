@@ -133,10 +133,7 @@ export default function Page() {
                 Wrong data may lead to incorrect quotes
               </Text>
               <br />
-              <Group position="apart">
-                <Text>Your Username:</Text>
-                <Text>{quoteVals?.user_name}</Text>
-              </Group>
+              
               <Group position="apart">
                 <Text>The registration number of your vehicle:</Text>
                 <Text>{quoteVals?.regis}</Text>

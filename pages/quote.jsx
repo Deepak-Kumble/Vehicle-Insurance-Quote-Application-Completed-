@@ -117,6 +117,7 @@ export default function Page() {
                   required
                   {...form.getInputProps("lastName")}
                 />
+          
                 <Radio.Group {...form.getInputProps("gender")} label="Gender:" size="md" required>
                   <Group>
                     <Radio label="Male" value="Male" />
@@ -187,7 +188,7 @@ export default function Page() {
                 />
                 <Group position="center">
                   <Button type="submit" radius="xs">
-                    Save
+                    Register
                   </Button>
                 </Group>
               </Stack>
