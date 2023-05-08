@@ -74,19 +74,14 @@ export function HeroSection() {
 
   return (
     <div className={classes.wrapper}>
-      <Container size={700} className={classes.inner}>
+      <Container size={800} className={classes.inner}>
         <h1 className={classes.title}>
           Get an{" "}
-          <Text component="span" variant="gradient" gradient={{ from: "white", to: "white" }} inherit>
+          <Text component="span" variant="gradient" gradient={{ from: "black", to: "black" }} inherit>
             Instant Quote
           </Text>{" "}
           for Your Vehicle Insurance.
         </h1>
-
-        <Text className={classes.description} color="dimmed">
-          Choose the best insurance policy for your vehicle. We offer fast and easy quotes, competitive
-          pricing, and flexible coverage options.
-        </Text>
 
         <Center maw={400} h={100} mx="auto">
           <Group className={classes.controls}>
@@ -101,6 +96,10 @@ export function HeroSection() {
             </Button>
           </Group>
         </Center>
+        <Text className={classes.description} color="dimmed">
+          Choose the best insurance policy for your vehicle. We offer fast and easy quotes, competitive
+          pricing, and flexible coverage options.
+        </Text>
       </Container>
     </div>
   );
