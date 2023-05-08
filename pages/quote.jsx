@@ -64,7 +64,7 @@ export default function Page() {
       //     user_name: username,
       //   })
       // );
-      Router.push("/");
+      Router.push("/index2");
     } catch (ex) {
       alert("An error occurred while saving user details.\n" + "Error Details: " + ex.message);
     }

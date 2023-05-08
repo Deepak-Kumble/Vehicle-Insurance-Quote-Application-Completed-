@@ -84,7 +84,7 @@ export default function Page() {
     })
       .then((response) => {
         if (response.ok) {
-          Router.push("/");
+          Router.push("/index3");
           localStorage.removeItem("quote");
           const paymentSuccessDiv = document.createElement("div");
           paymentSuccessDiv.textContent = "Payment has been successfully completed";
