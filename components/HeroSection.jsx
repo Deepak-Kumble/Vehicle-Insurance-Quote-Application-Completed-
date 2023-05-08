@@ -2,6 +2,8 @@ import { createStyles, Container, Text, Button, Group, rem } from "@mantine/core
 import { Center } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import Link from "next/link";
+import Router from "next/router";
+import { DeleteUserState } from "./data/UserQuoteStateSimulator";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -72,6 +74,19 @@ const useStyles = createStyles((theme) => ({
 export function HeroSection() {
   const { classes } = useStyles();
 
+  const StupidQuoteRedirect = () => {
+    localStorage.setItem(
+      "quote",
+      JSON.stringify({
+        user_name: "demo1user",
+      })
+    );
+
+    DeleteUserState("demo1user");
+
+    Router.push("/quote1");
+  };
+
   return (
     <div className={classes.wrapper}>
       <Container size={800} className={classes.inner}>
@@ -89,10 +104,9 @@ export function HeroSection() {
               size="xl"
               className={classes.control}
               variant="gradient"
+              onClick={StupidQuoteRedirect}
               gradient={{ from: "blue", to: "cyan" }}>
-              <Link href="/quote" className={classes.link} style={{ textDecoration: "none", color: "white" }}>
-                Get your Quote now
-              </Link>
+              Get your Quote now
             </Button>
           </Group>
         </Center>
