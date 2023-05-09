@@ -194,7 +194,7 @@ export default function Page() {
 
                 <Group position="right">
                   <Button type="submit" radius="xs">
-                    Save & Next
+                    Next
                   </Button>
                 </Group>
               </Stack>

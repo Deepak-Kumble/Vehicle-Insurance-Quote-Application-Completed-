@@ -91,19 +91,21 @@ export function HeroSection2() {
     <div className={classes.wrapper}>
       <Container size={800} className={classes.inner}>
         <Center>
-        <h1 className={classes.title}>
-          Get an{" "}
-          <Text component="span" variant="gradient" gradient={{ from: "black", to: "black" }} inherit>
-            Instant Quote
-          </Text>{" "}
-        </h1>
+          <h1 className={classes.title}>
+            Get an{" "}
+            <Text component="span" variant="gradient" gradient={{ from: "black", to: "black" }} inherit>
+              Instant Quote
+            </Text>{" "}
+          </h1>
         </Center>
-        <br/>
+        <br />
         <Center>
-            <strong>
-        <Text size="xl" color="#cc0000">
-          Registration has been successfull. Click below to get your personalized quote.
-        </Text></strong>
+          <strong>
+            <Text size="xl" color="#001933">
+              <Center>Registration has been successful.</Center>Your account details have been sent to your
+              registered email id.<Center> Click below to get your personalized quote.</Center>
+            </Text>
+          </strong>
         </Center>
         <Center maw={400} h={100} mx="auto">
           <Group className={classes.controls}>

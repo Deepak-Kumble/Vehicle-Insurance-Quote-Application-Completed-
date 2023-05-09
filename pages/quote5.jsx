@@ -208,7 +208,7 @@ export default function Page() {
 
                   <Grid>
                     <Grid.Col span={9}>
-                      <NumberInput
+                      <TextInput
                         label="Card Number:"
                         id="card-number"
                         name="cardno"
@@ -219,7 +219,7 @@ export default function Page() {
                     </Grid.Col>
 
                     <Grid.Col span={3}>
-                      <NumberInput
+                      <TextInput
                         type="password"
                         label="CVV:"
                         placeholder="Enter CVV"
