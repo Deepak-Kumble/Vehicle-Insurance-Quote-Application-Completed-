@@ -4,20 +4,17 @@ import { IconGauge, IconUser, IconCookie, IconBolt, IconMoneybag, IconHelp } fro
 const mockdata = [
   {
     title: "Fast and Easy Quotes",
-    description:
-      "Proivde the required information and get the quote in minutes",
+    description: "Provide the required information and get the quote in minutes",
     icon: IconBolt,
   },
   {
     title: "Competitive Pricing",
-    description:
-      "Compare prices of different quotes and find the quote that best suits your needs.",
+    description: "Compare prices of different quotes and find the quote that best suits your needs.",
     icon: IconMoneybag,
   },
   {
     title: "Flexible Coverage Support",
-    description:
-      "All the quotes provide  good insurance coverage and you can choose any one of them.",
+    description: "All the quotes provide  good insurance coverage and you can choose any one of them.",
     icon: IconHelp,
   },
 ];
