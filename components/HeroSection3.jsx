@@ -101,7 +101,7 @@ export function HeroSection3() {
         <br/>
         <Center>
             <strong>
-        <Text size="xl" color="#cc0000">
+        <Text size="xl" color="#001933">
           Payment has been successful. Click below to go home.
         </Text></strong>
         </Center>

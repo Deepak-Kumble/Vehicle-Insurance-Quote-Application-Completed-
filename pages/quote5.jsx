@@ -87,7 +87,7 @@ export default function Page() {
           Router.push("/index3");
           localStorage.removeItem("quote");
           const paymentSuccessDiv = document.createElement("div");
-          paymentSuccessDiv.textContent = "Payment has been successfully completed";
+          paymentSuccessDiv.textContent = "Payment is being processed";
           paymentSuccessDiv.style.textAlign = "center";
           paymentSuccessDiv.style.color = "red";
           paymentSuccessDiv.style.fontWeight = "bold";

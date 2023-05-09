@@ -16,6 +16,7 @@ import {
   Drawer,
   Collapse,
   ScrollArea,
+  Image,
   rem,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -155,7 +156,10 @@ export function NavAccount() {
     <Box>
       <Header height={60} px="md" bg={"light blue"}>
         <Group position="apart" sx={{ height: "100%" }}>
-          <h3>AUTO ARMOR</h3>
+          <Link href="/">
+            <Image src="/images/logo.png" alt="Your Logo" width={90} height={55} />
+          </Link>
+          {/* <h3>AUTO ARMOR</h3> */}
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
             <Link href="/" className={classes.link}>
               Home

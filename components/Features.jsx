@@ -86,9 +86,7 @@ export function Features() {
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md" align="justify">
         Auto Armor is the premier choice for vehicle insurance quotes. Our online platform makes it easy to
-        compare rates from multiple providers and find the best coverage for your needs. We understand that
-        choosing the right insurance can be overwhelming, so we've made it our mission to simplify the process
-        and provide personalized recommendations. 
+        compare rates from multiple providers and find the best coverage for your needs.
       </Text>
 
       <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
