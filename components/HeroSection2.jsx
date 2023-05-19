@@ -90,14 +90,7 @@ export function HeroSection2() {
   return (
     <div className={classes.wrapper}>
       <Container size={800} className={classes.inner}>
-        <Center>
-          <h1 className={classes.title}>
-            Get an{" "}
-            <Text component="span" variant="gradient" gradient={{ from: "black", to: "black" }} inherit>
-              Instant Quote
-            </Text>{" "}
-          </h1>
-        </Center>
+        <Center></Center>
         <br />
         <Center>
           <strong>

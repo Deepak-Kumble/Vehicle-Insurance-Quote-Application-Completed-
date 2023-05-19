@@ -38,8 +38,8 @@ export function Policy1({ quote }) {
       </Text>
       <Text size="md" mt="sm">
         <p>
-          Our Policy A is a great choice for those who are looking for basic coverage at an affordable price.
-          This policy offers the following:
+          Our Base Policy is a great choice for those who are looking for basic coverage at an affordable
+          price. This policy offers the following:
         </p>
         <ul>
           <li>Liability coverage for bodily injury and property damage</li>
